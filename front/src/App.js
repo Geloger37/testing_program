@@ -15,10 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React and Arch!
-
-
-          
+          Learn React and Windows!
         </a>
       </header>
     </div>
