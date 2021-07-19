@@ -1,5 +1,7 @@
 import './App.css';
-import Navigation from './components/Nagigation'
+import {Route} from 'react-router-dom';
+import Navigation from './components/Navigation';
+import settings from './components/profiles/settings';
 
 function App() {
   return (
@@ -7,7 +9,7 @@ function App() {
 
       <Navigation/>
 
-
+      <Route path="/profiles/settings" component={settings}/>
 
 
     </div>
