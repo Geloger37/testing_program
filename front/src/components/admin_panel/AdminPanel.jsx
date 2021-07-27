@@ -1,11 +1,18 @@
+import React, { Component } from 'react';
+import Header from './components/Header';
+import SideBar from './components/SideBar';
+import Content from './components/Content';
 
-// https://github.com/KrunalLathiya/ReactAdminPanel - dashboard
+import css from './AdminPanel.module.css';
+
 function AdminPanel() {
-    return(
-        <div>
-            dd
-        </div>
-    )
+    return (
+      <div>
+        <Header props={css}/>
+        <SideBar />
+        <Content />
+      </div>
+    );
 }
 
 export default AdminPanel;
