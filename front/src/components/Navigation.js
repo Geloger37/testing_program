@@ -1,5 +1,5 @@
 import {Collapse, Dropdown, Nav, Navbar} from 'bootstrap-4-react';
-import {NavLink} from 'react-router-dom'
+import {NavLink} from "react-router-dom";
 
 function Navigation() {
     return (
