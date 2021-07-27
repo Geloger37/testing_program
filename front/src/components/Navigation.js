@@ -1,30 +1,13 @@
-import {Collapse, Dropdown, Nav, Navbar} from 'bootstrap-4-react';
-import {NavLink} from "react-router-dom";
-
 function Navigation() {
     return (
-            <Navbar expand="lg" dark bg="primary">
-                <Navbar.Brand href="#">
-                    OlympIstu
-                </Navbar.Brand>
-                <Navbar.Toggler target="#navbarSupportedContent" />
-                <Collapse navbar id="navbarSupportedContent">
-                    <Navbar.Nav ml="auto">
+        
+        <div>
 
-                        <Nav.Item dropdown>
-                            <Nav.Link dropdownToggle>Фамилия Имя Отчество</Nav.Link>
-                            <Dropdown.Menu>
-                               
-                                <Dropdown.Item>
-                                    <NavLink to="/profiles/settings">Настройки</NavLink>
-                                </Dropdown.Item>
+        Hello, world! And this should be running...
 
-                            </Dropdown.Menu>
-                        </Nav.Item>
-                    </Navbar.Nav>
-                </Collapse>
-            </Navbar>
-    );
-};
+        </div>
+
+    )
+}
 
 export default Navigation;

@@ -1,10 +1,9 @@
-import Navigation from "../Navigation";
+import Navigation from "../Header";
 
 
 function settings() {
     return (
         <div>
-            <Navigation/>
             Hello world!
         </div>
     );

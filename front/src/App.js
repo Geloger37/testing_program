@@ -1,14 +1,17 @@
 import './App.css';
-import {Route, BrowserRouter, Switch} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import settings from './components/profiles/settings';
+import Header from './components/Header';
 
 function App() {
   return (
-  <BrowserRouter>
-      <Switch>
+        <div>
+
+        <Header />    
+
         <Route path="/profiles/settings" component={settings}/>
-      </Switch>
-  </BrowserRouter>
+
+        </div>
   );
 }
 
