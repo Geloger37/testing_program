@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
-import SideBar from './components/SideBar';
-import Content from './components/Content';
 
 import css from './AdminPanel.module.css';
 
+import { Admin, Resource } from 'react-admin';
+import { PostList, PostEdit, PostCreate, PostIcon } from './posts';
+import restProvider from 'ra-data-simple-rest';
+
 function AdminPanel() {
     return (
-      <div>
-        <Header props={css}/>
-        <SideBar />
-        <Content />
-      </div>
+        <Admin dataProvider={restProvider('http://localhost:3000')}>
+            <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
+        </Admin>
     );
 }
 
