@@ -12,7 +12,7 @@ function Navigation() {
                     <Navbar.Nav ml="auto">
 
                         <Nav.Item dropdown>
-                            <Nav.Link dropdownToggle>Фамилия Имя Отчество</Nav.Link>
+                            <Nav.Link dropdownToggle>Профиль</Nav.Link>
                             <Dropdown.Menu>
                                
                                 <Dropdown.Item>
