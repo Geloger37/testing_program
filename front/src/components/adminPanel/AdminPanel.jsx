@@ -1,49 +1,19 @@
-import {CButton, CForm, CFormCheck, CFormInput, CFormLabel, CFormText} from "@coreui/react";
+import {CButton, CCol, CContainer, CForm, CFormCheck, CFormInput, CFormLabel, CFormText, CRow} from "@coreui/react";
+import LeftNav from "./LeftNav";
+import Header from "../Header";
 
 function AdminPanel() {
     return (
-        <CForm>
-
-            <div className="mb-3">
-
-                <CFormLabel htmlFor="exampleInputEmail1">Email address</CFormLabel>
-
-                <CFormInput type="email" id="exampleInputEmail1" aria-describedby="emailHelp" />
-
-                <CFormText id="emailHelp">We'll never share your email with anyone else.</CFormText>
-
-            </div>
-
-            <div className="mb-3">
-
-                <CFormLabel htmlFor="exampleInputPassword1">Email Password</CFormLabel>
-
-                <CFormInput type="password" id="exampleInputPassword1" />
-
-            </div>
-
-            <CFormCheck
-
-                className="mb-3"
-
-                label="Check me out"
-
-                onChange={(e) => {
-
-                    console.log(e.target)
-
-                }}
-
-            />
-
-            <CButton type="submit" color="primary">
-
-                Submit
-
-            </CButton>
-
-        </CForm>
+        <div>
+            <Header /> {/*TODO: посмотреть, откуда компонента */}
+            <CContainer>
+                <CRow className="align-items-start">
+                    <CCol><LeftNav /></CCol>
+                    <CCol>faf</CCol>
+                </CRow>
+            </CContainer>
+        </div>
     );
-};
+}
 
 export default AdminPanel;

@@ -14,7 +14,7 @@ function App() {
         <div>
           {/*<Route path='/' component={Main}/>*/}
           <Route path="/profiles/settings" component={Settings}/>
-          <Route exact path="/admin" component={AdminPanel}/>
+          <Route path="/admin" component={AdminPanel}/>
           <Route path="/authorization" component={Authorization}/>
           <Route path='/registration' component={Registration}/>
           <Route path='/restorePassword' component={RestorePassword}/> 
