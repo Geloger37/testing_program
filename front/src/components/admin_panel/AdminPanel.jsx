@@ -1,18 +1,28 @@
-import React, { Component } from 'react';
-
-import css from './AdminPanel.module.css';
-
-import { Admin, Resource } from 'react-admin';
-import { PostList, PostEdit, PostCreate, PostIcon } from './tasks';
-import restProvider from 'ra-data-simple-rest';
-import {ParticipantsCreate, ParticipantsEdit, ParticipantsIcon, ParticipantsList} from "./participants";
+import {CButton, CCol, CContainer, CForm, CFormCheck, CFormInput, CFormLabel, CFormText, CRow} from "@coreui/react";
+import { Route } from "react-router-dom";
+import LeftNav from "./LeftNav.jsx";
+import TasksTable from './TasksTable.jsx';
+import MembersTable from './MembersTable.jsx';
+import ContestsTable from './ContestsTable.jsx';
+import StatisticsTable from "./StaticticsTable.jsx";
 
 function AdminPanel() {
     return (
-        <Admin dataProvider={restProvider('http://localhost:3000')}>
-            <Resource name="tasks" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
-            <Resource name="participants" list={ParticipantsList} edit={ParticipantsEdit} create={ParticipantsCreate} icon={ParticipantsIcon} />
-        </Admin>
+        <div>
+            
+            <CContainer>
+                <CRow className="justify-content-start">
+                    <CCol xs={3}><LeftNav /></CCol>
+                    <CCol xs={9}>
+                        <Route path='/admin/tasks' component={TasksTable}/>
+                        <Route path='/admin/members' component={MembersTable}/>
+                        <Route path='/admin/contests' component={ContestsTable}/>
+                        <Route path='/admin/statistics' component={StatisticsTable} />
+
+                    </CCol>
+                </CRow>
+            </CContainer>
+        </div>
     );
 }
 
